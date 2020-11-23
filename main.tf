@@ -13,6 +13,17 @@
 #  name = "ubuntu:latest"
 #}
 
+
+provider "kubernetes" {
+  load_config_file = "false"
+
+ # host = "https://104.196.242.174"
+
+ # client_certificate     = "${file("~/.kube/client-cert.pem")}"
+ # client_key             = "${file("~/.kube/client-key.pem")}"
+ # cluster_ca_certificate = "${file("~/.kube/cluster-ca-cert.pem")}"
+}   
+
 provider "kubernetes" {
   #config_context = "my-context"
 }
