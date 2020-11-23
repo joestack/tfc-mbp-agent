@@ -1,14 +1,24 @@
-# Configure the Docker provider
-provider "docker" {
-  #host = "tcp://127.0.0.1:2376/"
+## Configure the Docker provider
+#provider "docker" {
+#  #host = "tcp://127.0.0.1:2376/"
+#}
+#
+## Create a container
+#resource "docker_container" "foo" {
+#  image = docker_image.ubuntu.latest
+#  name  = "foo"
+#}
+#
+#resource "docker_image" "ubuntu" {
+#  name = "ubuntu:latest"
+#}
+
+provider "kubernetes" {
+  #config_context = "my-context"
 }
 
-# Create a container
-resource "docker_container" "foo" {
-  image = docker_image.ubuntu.latest
-  name  = "foo"
-}
-
-resource "docker_image" "ubuntu" {
-  name = "ubuntu:latest"
+resource "kubernetes_namespace" "example" {
+  metadata {
+    name = "my-first-namespace"
+  }
 }
