@@ -18,6 +18,7 @@ provider "kubernetes" {
   load_config_file = "false"
 
  host = "https://kubernetes.docker.internal:6443"
+ insecure = "true"
  # host = "https://104.196.242.174"
 
  # client_certificate     = "${file("~/.kube/client-cert.pem")}"
