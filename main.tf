@@ -1,7 +1,8 @@
 provider "kubernetes" {
+  config_path = "/root/.kube/config"
 #  load_config_file = "false"
 
-  host = "https://kubernetes.docker.internal:6443"
+#  host = "https://kubernetes.docker.internal:6443"
   #insecure = "true"
 
  # client_certificate     = "${var.client_certificate}"
