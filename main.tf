@@ -21,7 +21,7 @@ resource "helm_release" "vault" {
   #version    = "6.0.1"
 
   values = [
-    "${file("values.yaml")}"
+    file("values.yaml")
   ]
 
 }
