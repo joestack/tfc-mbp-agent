@@ -5,12 +5,12 @@ resource "helm_release" "mariadb" {
  
 
   set {
-    name  = "mariadbUser"
-    value = "foo"
+    name  = "rootUser.password"
+    value = "1234"
   }
 
   set {
-    name  = "mariadbPassword"
-    value = "qux"
+    name  = "db.user"
+    value = "testdb"
   }
 }
